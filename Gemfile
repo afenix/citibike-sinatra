@@ -1,9 +1,14 @@
-source 'https://rubygems.org'
+source("https://rubygems.org")
 
-gem 'sinatra'
-gem 'multi_json'
-gem 'sinatra-contrib'
+gem("sinatra")
+gem("sinatra-contrib", :require => "sinatra/reloader")
+gem("sinatra-activerecord")
+gem("rake")
+gem("pg")
 
-group :development do
-  gem 'shotgun'
+
+group(:test) do
+  gem("rspec")
+  gem("pry")
+  gem("shoulda-matchers")
 end
