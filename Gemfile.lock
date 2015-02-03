@@ -74,6 +74,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  multi_json
   pg
   pry
   rake
