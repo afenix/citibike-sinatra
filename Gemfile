@@ -6,6 +6,7 @@ gem "sinatra-activerecord"
 gem "rake"
 gem "pg"
 gem "multi_json"
+gem "json-stream"
 
 
 group :test do
