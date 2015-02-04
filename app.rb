@@ -20,16 +20,16 @@ get '/form' do
   erb :form
 end
 
-post '/form' do
+post '/map' do
   @starting = params.fetch("starting")
   @ending = params.fetch("ending")
-  erb :success
-end
-
-get '/success' do
- erb :success
+  erb :map
 end
 
 get '/map' do
+  erb :map
+end
+
+post '/map' do
   erb :map
 end
