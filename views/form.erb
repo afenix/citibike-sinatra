@@ -6,7 +6,7 @@
     <label name="starting">Start:</label>
     <select name="starting">
       <% @data.each do |object| %>
-      <option selected <%= object['name'] %>><%= object['name'] %></option>
+      <option selected <%= object['lat'] %>><%= object['name'] %></option>
       <% end %>
     </select>
   </div>
@@ -15,7 +15,7 @@
     <label name="ending">End:</label>
     <select name="ending">
       <% @data.each do |object| %>
-      <option selected <%= object['name'] %>><%= object['name'] %></option>
+      <option selected <%= object['lng'] %>><%= object['name'] %></option>
       <% end %>
     </select>
   </div>

@@ -23,6 +23,7 @@ end
 post '/map' do
   @starting = params.fetch("starting")
   @ending = params.fetch("ending")
+binding.pry
   erb :map
 end
 
