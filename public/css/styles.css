@@ -1,2 +1,11 @@
 /*for leaflet map*/
 #map { height: 400px; }
+
+body {
+  font-family: 'Noto Serif', 'serif';
+  background: url('/img/bike-painting.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100% 100%;
+}

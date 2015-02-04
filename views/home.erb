@@ -1,6 +1,8 @@
-<h1>THE DATA</h1>
+<h2>BEHOLD! Json data...isn't it purdy?</h2>
 
 <ul><% @data.each do |object| %>
-  <li><%= object['name'] %> <%= object['lat'] %> <%= object['lng'] %> </li>
+  <li><em>Station Name:</em> <%= object['name'] %>, <em>Latitude:</em> <%= object['lat'] %>, <em>Longitude:</em> <%= object['lng'] %> </li>
   <% end %>
 </ul>
+
+<a href="/form">Go to the form ==></a>
