@@ -1,25 +1,28 @@
-<h1>MAP</h1>
-<div id="start_stop">
-  <p> You chose the following: </p>
-  <ul>
-    <li>Start Location: <%= @start %></li>
-    <li>End Location: <%= @end %></li>
-  </ul>
-</div>
+<h3>Here's where you are and where you're going.</h3>
+
 
 <div id="map">
   <script type="text/javascript" charset="utf-8">
     var map = L.map('map').setView([40.7142, -74.0064], 11);
-    start = L.marker(<%= @start %>).bindPopup("I am the Start point.").addTo(map);
-    end = L.marker(<%= @end %>).bindPopup("I am the End point.").addTo(map);
-    L.tileLayer('http://tile.stamen.com/terrain/{z}/{x}/{y}.png', {attribution: 'Stamen Watercolor'}, {
+    L.marker(<%= @start %>).bindPopup("Start here.").addTo(map).openPopup();
+    L.marker(<%= @end %>).bindPopup("End here.").addTo(map);
+    L.tileLayer('http://tile.stamen.com/watercolor/{z}/{x}/{y}.png', {attribution: 'Stamen Watercolor'}, {
       attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
       maxZoom: 18
     }).addTo(map);
-
-
+    map.fitBounds,pad( 1 )([
+      [<%= @start %>],
+      [<%= @end %>]
+      ]);
   </script>
 </div>
 
+<div id="start_stop">
+  <p> You chose the following: </p>
+  <ul>
+    <li><strong>Start Location:</strong> <%= @start %>  <strong> End Location:</strong> <%= @end %></li>
+  </ul>
+</div>
 
+<br>
 <a href="/form"><== Go Back</a>

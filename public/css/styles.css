@@ -3,13 +3,28 @@
 
 body {
   font-family: 'Noto Serif', 'serif';
-  background: url('/img/bike-painting.jpg') no-repeat center center fixed;
+  background: url('/img/biketypology.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: 100% 100%;
+  background-size: 40% 40%;
 }
 
 #start_stop {
-  color: white;
+  color: grey;
+}
+
+#form-group {
+  padding: 5px 5px;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 25px;
+}
+
+#form-group.end {
+  margin-top: 5px;
+}
+
+.btn {
+  margin-left: 200px;
 }

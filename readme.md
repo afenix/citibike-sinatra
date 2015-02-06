@@ -50,7 +50,7 @@ Change the code in home.erb so that it prints a list of every station name, foll
 2. create a view, and update the route def so that `/form` will render that view
 3. put a heading on the page with the text "Map my route!"
 4. inside your view, create a `<form>` element with 2 `<select>` elements, one with `name="start"` and the other with `name="end"`. also create a submit button.
-5. label each `<select>` element with the words "start:" and "end:" respectively 
+5. label each `<select>` element with the words "start:" and "end:" respectively
 6. inside the `<select>` elements, loop through the data hash and create an `<option>` element for each station with the `value` of the station name
 
 you should now have a form that looks like this:
@@ -76,20 +76,20 @@ the app you cloned also has a view called `map.erb`. this map uses [leaflet.js](
 </script>
 ```
 
-basically, this code makes a `div` with `id=map`. the `<script>` contains javascript that makes a map and puts it into that div. 
+basically, this code makes a `div` with `id=map`. the `<script>` contains javascript that makes a map and puts it into that div.
 
-1. create a route at `/map` and have it render this view. you should see a map, with no points. it'll look like this: 
+1. create a route at `/map` and have it render this view. you should see a map, with no points. it'll look like this:
 ![map](http://content.screencast.com/users/ag_dubs/folders/Jing/media/c544724f-1eea-433b-80fe-46079fb41d0f/00000048.png)
 
 ### Map the data
-Let's connect our map to the data we receive from the form now. 
+Let's connect our map to the data we receive from the form now.
 
 #### A. respond to the form post with the map view
-1. change the action on your form to the `/map` route. 
+1. change the action on your form to the `/map` route.
 2. change your map route to respond to a `post` instead of a `get`
 3. test your app to ensure that everything still works
 
-#### B. play with params again 
+#### B. play with params again
 1. in your map route, create 2 instance variables and store the start and end station names in them
 2. in `map.erb` create an unordered list and print the name of the start and end station name to the screen
 

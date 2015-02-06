@@ -2,7 +2,7 @@
 
 <br>
 <form action="/map" method="post" class="form-horizontal">
-  <div class="form-group">
+  <div id="form-group">
     <label name="start">Start:</label>
     <select id="start" name="start">
       <% @data.each do |station| %>
@@ -11,7 +11,7 @@
     </select>
   </div>
 
-  <div class="form-group">
+  <div id="form-group">
     <label name="ending">End:</label>
     <select id="end" name="end">
       <% @data.each do |station| %>
@@ -19,8 +19,8 @@
       <% end %>
     </select>
   </div>
-    <button name="submit" class="btn btn-default">Submit</button>
+    <button id="button" name="submit" class="btn btn-default">Submit</button>
 </form>
 
-</b>
+<br>
 <a href="/form"><== Go Back</a>
