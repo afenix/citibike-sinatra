@@ -1,7 +1,8 @@
+require 'pry'
 require 'json'
 require 'multi_json'
 require 'bundler/setup'
-require 'pry'
+
 Bundler.require(:default)
 
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
@@ -21,9 +22,8 @@ get '/form' do
 end
 
 post '/map' do
-  @starting = params.fetch("starting")
-  @ending = params.fetch("ending")
-binding.pry
+  @start = @params[:start]
+  @end = @params[:end]
   erb :map
 end
 

@@ -3,23 +3,24 @@
 <br>
 <form action="/map" method="post" class="form-horizontal">
   <div class="form-group">
-    <label name="starting">Start:</label>
-    <select name="starting">
-      <% @data.each do |object| %>
-      <option selected <%= object['lat'] %>><%= object['name'] %></option>
+    <label name="start">Start:</label>
+    <select id="start" name="start">
+      <% @data.each do |station| %>
+        <option value="<%= [station["lat"].to_f / 1000000, station["lng"].to_f / 1000000] %>"><%= station["name"] %></option>
       <% end %>
     </select>
   </div>
 
   <div class="form-group">
     <label name="ending">End:</label>
-    <select name="ending">
-      <% @data.each do |object| %>
-      <option selected <%= object['lng'] %>><%= object['name'] %></option>
+    <select id="end" name="end">
+      <% @data.each do |station| %>
+      <option value="<%= [station["lat"].to_f / 1000000, station["lng"].to_f / 1000000] %>"><%= station["name"] %></option>
       <% end %>
     </select>
   </div>
     <button name="submit" class="btn btn-default">Submit</button>
 </form>
 
-<a href="/"><== Go Back</a>
+</b>
+<a href="/form"><== Go Back</a>
